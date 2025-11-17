@@ -1,10 +1,9 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CreditCard, Shield, Check } from "lucide-react";
-import { PricingTable } from "@clerk/nextjs";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import Pricing from "@/components/pricing";
+import Pricing from "@/components/pricing-client";
 
 export default async function PricingPage() {
   return (

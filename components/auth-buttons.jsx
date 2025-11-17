@@ -1,9 +1,20 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { SignInButton, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 
 export function AuthButtons({ showSignIn, showUserButton }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <>
       {showSignIn && (
